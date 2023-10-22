@@ -1,0 +1,32 @@
+# We are taking three inputs.
+# The third number will determine the type of operation
+# If the third number is 0, addition will be performed.
+# If the third number is 1, subtraction will be performed.
+# If the third number is 2, multiplication will be done.
+# If the third number is 3, division will be done.
+0 read r1
+1 read r2
+2 read r3
+3 setn r9 2
+# At this point, if the number is greater than 1, dividing by 2 will give 1. 
+# This shows us that this operation is multiplication or division.
+# However, if the number is 1 or 0, it will return to zero as the result of the division.
+# This indicates whether the operation is either adding or substraction.
+4 div r10 r3 r9
+5 jgtzn r10 11
+# If the third number is equal to 0, this indicates addition.
+# Otherwise, it means that there is a subtraction operation.
+6 jeqzn r3 9
+7 sub r1 r1 r2
+8 jumpn 16
+9 add r1 r1 r2
+10 jumpn 16
+# We determine whether it is multiplication or division by taking the mode of the number.
+11 mod r3 r3 r9
+12 jgtzn r3 15
+13 mul r1 r1 r2
+14 jumpn 16
+15 div r1 r1 r2
+# We end the program by printing the number.
+16 write r1 
+17 halt

@@ -1,0 +1,19 @@
+# We are taking two inputs
+0 read r1
+1 read r2
+# We add the two numbers and print the result.
+2 add r3 r1 r2
+3 write r3
+# We subtract the two numbers and print the result.
+4 sub r3 r1 r2
+5 write r3
+# We multiply the two numbers we get and print the result.
+6 mul r3 r1 r2
+7 write r3
+# We divide the two numbers we get and print the result.
+# If the second number is 0, we skip the division.
+8 jeqzn r2 11
+9 div r3 r1 r2
+10 write r3
+# At this point, we are ending our program.
+11 halt

@@ -23,7 +23,8 @@ Feel free to explore the HMMM code in this repository to understand how the calc
 
 ## Running the Program
 
-You can run this HMMM program using a compatible HMMM simulator or interpreter. Make sure to provide the necessary input values as specified above.
+You can run this HMMM program using a compatible HMMM simulator or interpreter. Make sure to provide the necessary input values as specified above. 
+You can try to run the code on this site: https://shickey.github.io/HMMM.js/#/
 
 ## Contribution
 

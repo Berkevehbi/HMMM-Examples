@@ -1,0 +1,17 @@
+# We receive input value from the user.
+0 read r1
+1 setn r10 1
+2 setn r11 -1
+# If the input is less than 0, we return 0 to the user and end the program.
+3 jltzn r1 11
+4 jgtzn r1 6
+5 jeqzn r1 9
+# Here we start the loop and multiply until the number is 0.
+6 mul r10 r10 r1
+7 add r1 r1 r11
+8 jumpn 3
+# When the number is equal to 0, we print the result and end the program.
+9 write r10
+10 halt
+11 write r0
+12 halt
